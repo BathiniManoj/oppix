@@ -1,0 +1,119 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block home %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CareerCraft - Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<section class="hero">
+  <h1>
+    Craft your  Career <br>
+    <span style="color: var(--brown-main);">With Intelligence</span>
+  </h1>
+  <p>Discover placements and internships tailored to your skills.</p>
+  <a href="{% url 'home' %}">
+    <button class="btn-primary">Start Your Journey →</button>
+  </a>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h2>{{ active_jobs|default:"10K+" }}</h2>
+    <p>Active Jobs</p>
+  </div>
+  <div class="stat">
+    <h2>{{ companies|default:"500+" }}</h2>
+    <p>Companies</p>
+  </div>
+  <div class="stat">
+    <h2>{{ match_rate|default:"95%" }}</h2>
+    <p>Match Rate</p>
+  </div>
+</section>
+
+<section class="section">
+<h2>Everything You Need to Succeed</h2>
+<p class="subtitle">Powerful tools to accelerate your career.</p>
+
+<div class="grid-2">
+  <div class="card">
+    <div class="icon-box">📄</div>
+    <h3>AI Resume Builder</h3>
+    <p>Create ATS-friendly resumes.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon-box">🎯</div>
+    <h3>Smart Matching</h3>
+    <p>Get matched with ideal jobs.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon-box">💼</div>
+    <h3>Placements</h3>
+    <p>Access curated listings.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon-box">🔔</div>
+    <h3>Notifications</h3>
+    <p>Never miss an opportunity.</p>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<h2>How It Works</h2>
+<p class="subtitle">Simple 4-step process</p>
+
+<div class="grid-4">
+  <div class="card"><div class="icon-box">01</div><h3>Create Profile</h3></div>
+  <div class="card"><div class="icon-box">02</div><h3>Build Resume</h3></div>
+  <div class="card"><div class="icon-box">03</div><h3>Get Matched</h3></div>
+  <div class="card"><div class="icon-box">04</div><h3>Land Job</h3></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Explore by Category</h2>
+<p class="subtitle">Find jobs by domain</p>
+
+<div class="grid-3">
+  <div class="card"><div class="icon-box">💻</div><h3>Software</h3><a href="#" class="view-btn">View</a></div>
+  <div class="card"><div class="icon-box">🎨</div><h3>Design</h3><a href="#" class="view-btn">View</a></div>
+  <div class="card"><div class="icon-box">📊</div><h3>Data</h3><a href="#" class="view-btn">View</a></div>
+  <div class="card"><div class="icon-box">📈</div><h3>Marketing</h3><a href="#" class="view-btn">View</a></div>
+  <div class="card"><div class="icon-box">💼</div><h3>Business</h3><a href="#" class="view-btn">View</a></div>
+  <div class="card"><div class="icon-box">💰</div><h3>Finance</h3><a href="#" class="view-btn">View</a></div>
+</div>
+</section>
+
+ <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Ready to Accelerate Your Career?</h1>
+    <p>
+      Join thousands of students who've found their dream jobs and internships through CareerCraft.
+    </p>
+
+    <div class="hero-buttons">
+      {% comment %} <button class="btn-light" onclick="showAlert()">Create Free Account →</button> {% endcomment %}
+      <a href="{% url 'resumebuilder' %}">
+      <button class="btn-outline" onclick="showResume()">Try Resume Builder</button>
+    </div>
+    </a>
+  </section>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

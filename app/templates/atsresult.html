@@ -1,0 +1,91 @@
+{% extends "navbar.html" %}
+{% load static %}
+
+{% block home %}
+
+<link rel="stylesheet" href="{% static 'css/resumepreview.css' %}">
+{% comment %} <h2>ATS Score: {{ score }}%</h2> {% endcomment %}
+
+{% comment %} {% if score >= 75 %}
+<p style="color:green">✔ Strong ATS Compatibility</p>
+{% else %}
+<p style="color:red">⚠ Needs Improvement</p>
+{% endif %}
+
+<h3>Matched Keywords</h3>
+<ul>
+{% for k in matched %}
+<li>{{ k }}</li>
+{% endfor %}
+</ul>
+
+<h3>Missing Keywords</h3>
+<ul>
+{% for k in missing %}
+<li>{{ k }}</li>
+{% endfor %}
+</ul> {% endcomment %}
+
+<div class="ats-page">
+
+    <div class="resume-wrapper">
+        <div class="resume-card">
+
+            <div class="resume-header">
+                <h1>{{ resume.full_name }}</h1>
+                <p>{{ resume.email }} | {{ resume.phone }}</p>
+                <p>{{ resume.linkedin }} | {{ resume.github }}</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Summary</h2>
+                <p>{{ resume.summary }}</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Skills</h2>
+                <p>{{ resume.skills }}</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Experience</h2>
+                <p>{{ resume.experience }}</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Projects</h2>
+                <p>{{ resume.projects }}</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Education</h2>
+                <p>{{ resume.education }}</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Certifications</h2>
+                <p>{{ resume.certifications }}</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Achievements</h2>
+                <p>{{ resume.achievements }}</p>
+            </div>
+
+        </div>
+
+        <div class="resume-actions">
+            <a href="{% url 'download_resume' resume.id %}" class="download-btn">
+                Download PDF
+            </a>
+
+            <a href="/" class="secondary-btn">
+                Build Another Resume
+            </a>
+        </div>  
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+
+{% extends "navbar.html" %}
+
+{% load static %}
+{% block home %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/results.css' %}">
+{% endblock %}
+
+
+<section class="jobs-wrapper">
+
+    <h2 class="section-title">Matched Jobs</h2>
+
+    {% if jobs %}
+        <div class="jobs-grid">
+            {% for job in jobs %}
+                <div class="job-card">
+
+                    <div class="job-header">
+                        <h3 class="job-title">{{ job.title }}</h3>
+                        <span class="job-source">{{ job.source }}</span>
+                    </div>
+
+                    <p class="job-company">
+                        {{ job.company }}
+                    </p>
+
+                    <a href="{{ job.link }}" target="_blank" class="apply-btn">
+                        Apply Now →
+                    </a>
+
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="no-jobs">
+            <p>No jobs found.</p>
+        </div>
+    {% endif %}
+
+</section>
+
+{% endblock %}

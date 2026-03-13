@@ -1,0 +1,161 @@
+/* ===================================== */
+/* ATS PAGE WRAPPER (FULL ISOLATION) */
+/* ===================================== */
+
+.ats-page {
+    background-color: #f4f6f9;
+    padding: 50px 15px;
+}
+
+/* ===================================== */
+/* RESUME WRAPPER */
+/* ===================================== */
+
+.ats-page .resume-wrapper {
+    max-width: 850px;
+    margin: auto;
+}
+
+/* ===================================== */
+/* RESUME CARD */
+/* ===================================== */
+
+.ats-page .resume-card {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 4px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
+    font-family: "Times New Roman", serif;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* ===================================== */
+/* HEADER */
+/* ===================================== */
+
+.ats-page .resume-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ats-page .resume-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.ats-page .resume-header p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+/* ===================================== */
+/* SECTIONS */
+/* ===================================== */
+
+.ats-page .resume-section {
+    margin-bottom: 18px;
+}
+
+.ats-page .resume-section h2 {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.ats-page .resume-section p {
+    margin: 0;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+/* ===================================== */
+/* ACTION BUTTONS */
+/* ===================================== */
+
+.ats-page .resume-actions {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.ats-page .download-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.ats-page .download-btn:hover {
+    background-color: #0056b3;
+}
+
+.ats-page .secondary-btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.ats-page .secondary-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* ===================================== */
+/* MOBILE */
+/* ===================================== */
+
+@media (max-width: 768px) {
+    .ats-page .resume-card {
+        padding: 25px;
+    }
+
+    .ats-page .resume-header h1 {
+        font-size: 20px;
+    }
+
+    .ats-page .resume-section h2 {
+        font-size: 13px;
+    }
+
+    .ats-page .resume-section p {
+        font-size: 13px;
+    }
+}
+
+/* ===================================== */
+/* PRINT VERSION */
+/* ===================================== */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .navbar,
+    .resume-actions {
+        display: none;
+    }
+
+    .ats-page {
+        padding: 0;
+    }
+
+    .ats-page .resume-card {
+        box-shadow: none;
+        padding: 0;
+    }
+}

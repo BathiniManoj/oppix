@@ -1,0 +1,75 @@
+{% load static %}
+
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CareerCraft - Opportunity Finder{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <!-- navbar.html -->
+        <nav  class="navbar">
+            <a href="{% url 'home' %}" class="logo-link">
+            <div class="logo"> 
+                CareerCraft
+            </div>
+</a>
+            <div class="nav-links">
+                <a href="{% url 'upload_resume' %}">Jobs</a>
+                <a href="{% url 'resumebuilder' %}">ResumeBuilder</a>
+                {% comment %} <a href="{% url 'home' %}">Categories</a> {% endcomment %}
+            </div>
+
+       
+        </nav>
+    </header>
+<body>
+    {% block home %}
+    {% endblock %}
+</body>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div class="logo">
+                    <div class="logo-box"></div>
+                    CareerCraft
+                </div>
+                <p style="margin-top: 15px;">
+                    Your intelligent career companion. Discover opportunities tailored to your skills and aspirations.
+                </p>
+            </div>
+
+            <div>
+                <h3>For Students</h3>
+                <a href="#">Browse Jobs</a>
+                <a href="#">Internships</a>
+                <a href="{% url 'resumebuilder' %}">Resume Builder</a>
+                <a href="#">My Profile</a>
+            </div>
+
+            <div>
+                <h3>Resources</h3>
+                <a href="#">Career Tips</a>
+                <a href="#">Interview Prep</a>
+                <a href="#">Skill Assessments</a>
+            </div>
+
+            <div>
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 CareerCraft. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

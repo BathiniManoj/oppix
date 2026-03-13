@@ -1,0 +1,187 @@
+:root {
+  --bg: #f6f1eb;
+  --brown-dark: #3b2a1e;
+  --brown-main: #8b5e34;
+  --brown-light: #e7d9c9;
+  --text-muted: #6e5c4c;
+}
+
+/* PAGE BACKGROUND */
+body {
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+}
+
+/* MAIN WRAPPER */
+.upload-wrapper {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+/* CARD */
+.upload-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeUp 0.8s ease;
+}
+
+.upload-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+/* FORM */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.upload-form input,
+.upload-form select,
+.upload-form textarea {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.upload-form input:focus,
+.upload-form textarea:focus {
+  border-color: var(--brown-main);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 94, 52, 0.1);
+}
+
+/* BUTTON */
+.btn-main {
+  background: var(--brown-main);
+  color: white;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  background: var(--brown-dark);
+  transform: translateY(-3px);
+}
+
+/* ERROR */
+.error-msg {
+  color: red;
+  margin-top: 15px;
+}
+
+/* RESULTS */
+.results-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* JOB GRID */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* JOB CARD */
+.job-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.job-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.job-card h3 {
+  font-size: 18px;
+}
+
+/* BADGE */
+.badge {
+  background: var(--brown-light);
+  color: var(--brown-dark);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* COMPANY */
+.company {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* APPLY BUTTON */
+.apply-btn {
+  display: inline-block;
+  background: var(--brown-main);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: var(--brown-dark);
+}
+
+/* NO JOBS */
+.no-jobs {
+  color: var(--text-muted);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .upload-card {
+    padding: 25px;
+  }
+}
